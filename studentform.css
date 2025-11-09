@@ -1,0 +1,129 @@
+/* ...existing code... */
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #f7fbff 0%, #eef6ff 100%);
+  color: #1f2937;
+  padding: 28px 12px;
+}
+
+/* form table styling */
+table {
+  width: 90%;
+  max-width: 920px;
+  margin: 12px auto;
+  border-collapse: collapse;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(16,24,40,0.06);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* header */
+thead th {
+  background: linear-gradient(180deg,#f0f9ff,#e6f2ff);
+  text-align: center;
+  padding: 18px 12px;
+  font-size: 20px;
+  color: #0b4a6f;
+}
+
+/* cells */
+td, th {
+  padding: 12px 14px;
+  vertical-align: middle;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* inputs and selects */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.03);
+  font-size: 14px;
+}
+
+/* radio */
+input[type="radio"] {
+  transform: scale(1.05);
+  margin-right: 8px;
+  accent-color: #16a34a;
+  vertical-align: middle;
+}
+
+/* submit button */
+#submit {
+  display: block;
+  width: min(320px, 100%);
+  margin: 10px auto;
+  padding: 12px 18px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(180deg,#38b24a,#1f8b2d);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(31,139,45,0.18);
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+
+/* hover / active */
+#submit:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(31,139,45,0.20); }
+#submit:active { transform: translateY(-1px); opacity: 0.96; }
+
+/* results table (created by script) */
+#results {
+  width: 90%;
+  max-width: 920px;
+  margin: 18px auto;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(2,6,23,0.06);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#results thead th {
+  background: #f3f7fb;
+  font-weight: 700;
+  color: #0f172a;
+  padding: 10px 12px;
+}
+
+#results td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* action buttons in result rows */
+#results button {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  background: #eef2f7;
+  color: #0f172a;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(3,7,18,0.06);
+  transition: transform .08s ease, background .12s ease;
+}
+
+#results button:hover { transform: translateY(-2px); background: #e0e6ef; }
+
+/* small styling for delete/edit distinction */
+#results button:first-of-type { background: #fff7e6; } /* edit (first button) */
+#results button[style*="red"], #results button[onclick*="remove"] { background: #ff6b6b; color: #fff; box-shadow: 0 8px 18px rgba(255,107,107,0.18); }
+
+/* responsive tweaks */
+@media (max-width: 640px) {
+  table, #results { width: 96%; }
+  thead th h1 { font-size: 18px; }
+  #submit { width: 100%; }
+}
