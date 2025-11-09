@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentForm</title>
+</head>
+<body>
+<link rel="stylesheet" href="studentform.css">    
+<title>student form</title>
+<style>
+    #submit{
+    background-color: greenyellow;
+    padding-right: 90%;
+    margin-left: 10px;
+
+}
+    #radi{
+        cursor: pointer;
+        
+    }
+   
+</style>
+<center>
+<table border="2" width="100%" length="100%">
+    <thead>
+        <tr><th colspan="2"><h1>Student Form</h1></th></tr>
+    </thead>
+    <tbody id="tablebody">
+        <tr>
+            <td>Name</td>
+            <td><input id="name" type="text" placeholder="Enter Your Name"></td>
+        </tr>
+        <tr>
+            <td>Age:</td>
+            <td><input id="age" type="number" placeholder="Enter Your Age"></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                <input  id="radi"  type="radio" name="gender" value="Male"> MALE 
+                <input   id="radi" type="radio" name="gender" value="Female"> FEMALE
+            </td>
+        </tr>
+        <tr>
+            <td>Course</td>
+            <td>
+                <select id="course">
+                    <option>JavaScript</option>
+                    <option>Python</option>
+                    <option>Java</option>
+                    <option>C++</option>
+                    <option>Ruby</option>
+                    <option >SQL</option>
+                    <OPTION>NOSQL</OPTION>
+                    <option > angular</option>
+                    <option > react</option>
+                    <option > nodejs</option>
+
+                </select>
+
+            </td>
+        </tr>
+        <tr>
+            <td>E-mail</td>
+            <td><input id="email" type="email" placeholder="Enter Your E-mail"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button  id="submit" onclick="submitt()" type="button">Save</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</center>
+<script src="student.js"></script>
+
+    
+</body>
+</html>
